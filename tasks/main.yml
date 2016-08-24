@@ -1,0 +1,6 @@
+---
+- name: Configure upstart for app
+  template: >
+    src=upstart.conf.j2
+    dest=/etc/init/{{app_name}}.conf
+  tags: upstart
